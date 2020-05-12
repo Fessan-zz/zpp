@@ -183,7 +183,7 @@
           <a href="#" class="col-lg2 footer_a">Авторские права</a>
           <a href="#" class="col-lg2 footer_a">Разработка сайта</a>
           <a href="#" class="col-lg2 footer_a">Контакт и адрес</a>
-          <div class="arrow_up position-absolute" href="#header"></div>
+          <a class="arrow_up position-absolute" href="#header"></a>
         </div>
       </section>
     </footer>

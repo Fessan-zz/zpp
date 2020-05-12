@@ -13,7 +13,6 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -253,11 +252,11 @@ main {
 /* Стрелка влево */
 .slick-arrow.slick-prev{
   background: url('assets/img/btn-left.png') 0 0  no-repeat;
-  left: 34%;
+  left: 34.4%;
 }
 /* Стрелка вправо */
 .slick-arrow.slick-next{
-  right: 33%;
+  right: 33.4%;
   background: url('assets/img/btn-right.png') 0 0 no-repeat;
 }
 
@@ -316,7 +315,6 @@ main {
   margin-left: 20px !important;
 }
 .footer_a{
-  font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;

@@ -28,7 +28,7 @@ export default {
     async register({ commit }, registerdata) {
       try {
         const resp = await axios({
-          url: `${BASE_API_URL}/signup`,
+          url: 'http://fessan.ru/api/signup',
           data: registerdata, // data register  передача данных ч/з dispatch
           method: 'POST'
         })
@@ -42,7 +42,7 @@ export default {
     async login({ commit }, logindata) {
       try {
         const resp = await axios({
-          url: `${BASE_API_URL}/login`,
+          url: `http://fessan.ru/api/login`,
           data: logindata, // data register  передача данных ч/з dispatch
           method: 'POST'
         })
