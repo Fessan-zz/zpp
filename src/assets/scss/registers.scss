@@ -108,7 +108,8 @@
   &__input:checked + &__box {
     fill: white;
     background: url('../assets/img/checked.svg') center no-repeat;
-    //border: 1px solid #30b700;
+    //border: 1px solid #30b700; ../assets/img/checked.svg'
+
   }
 }
 .header__btn-large {
