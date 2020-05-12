@@ -29,12 +29,12 @@ export default {
       try {
         const resp = await axios({
           url: `${BASE_API_URL}/signup`,
-          data: registerdata, //data register  передача данных ч/з dispatch
+          data: registerdata, // data register  передача данных ч/з dispatch
           method: 'POST'
         })
         return resp
       } catch (err) {
-        commit('auth_error') //ошибка
+        commit('auth_error') // ошибка
         console.log(err)
         // throw err //
       }
@@ -43,28 +43,22 @@ export default {
       try {
         const resp = await axios({
           url: `${BASE_API_URL}/login`,
-          data: logindata, //data register  передача данных ч/з dispatch
+          data: logindata, // data register  передача данных ч/з dispatch
           method: 'POST'
         })
         return resp
       } catch (err) {
-        commit('auth_error') //ошибка
+        commit('auth_error') // ошибка
         localStorage.removeItem('api_token')
         console.log(err)
-        //reject(err)
-        // throw err //
       }
-
-      // return new Promise((resolve, reject) => {
-      //   commit('auth_request')
-      // })
     },
     logout({ commit }) {
       return new Promise(resolve => {
         commit('logout')
         localStorage.removeItem('api_token')
         localStorage.removeItem('name')
-        delete axios.defaults.headers.common['Authorization']
+        delete axios.defaults.headers.common.Authorization
         resolve()
       })
     }

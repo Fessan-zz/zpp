@@ -1,19 +1,28 @@
 <template>
-<body class>
-  <Modal :showCloseCross="true" :showActionButton="false" :showCloseButton="false" @close="onClose">
-    <span slot="header" class="form-modal__heading">ПОДТВЕРЖДЕНИЕ РЕГИСТРАЦИИ</span>
-    <div class slot="body">
-      <div class="form-modal__text-block">
-        <p class="form-modal__text">Спасибо! Регистрация прошла успешно.</p>
-        <p class="form-modal__text">
-          На Ваш адрес e-mail пользователя отправлено письмо. Для
-          подтверждения регистрации перейдите по ссылке, указанной в нем
-        </p>
+  <body class>
+    <Modal
+      :showCloseCross="true"
+      :showActionButton="false"
+      :showCloseButton="false"
+      @close="onClose"
+    >
+      <span slot="header" class="form-modal__heading"
+        >ПОДТВЕРЖДЕНИЕ РЕГИСТРАЦИИ</span
+      >
+      <div class slot="body">
+        <div class="form-modal__text-block">
+          <p class="form-modal__text">Спасибо! Регистрация прошла успешно.</p>
+          <p class="form-modal__text">
+            На Ваш адрес e-mail пользователя отправлено письмо. Для
+            подтверждения регистрации перейдите по ссылке, указанной в нем
+          </p>
+        </div>
+        <button type="submit" class="btn header__btn-large" @click="onClose">
+          ГОТОВО
+        </button>
       </div>
-      <button type="submit" class="btn header__btn-large" @click="onClose">ГОТОВО</button>
-    </div>
-  </Modal>
-</body>
+    </Modal>
+  </body>
 </template>
 
 <script>

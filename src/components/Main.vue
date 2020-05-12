@@ -3,7 +3,11 @@
     <header class="container w-1200" id="header">
       <div class="row">
         <div class="wrapper_header ml-5 col-lg-8">
-          <img src="@/assets/img/zeleny.png" alt="logo" class="logo mt-5 img-fluid" />
+          <img
+            src="@/assets/img/zeleny.png"
+            alt="logo"
+            class="logo mt-5 img-fluid"
+          />
           <h1 class="header_h1 mt-3 mb-3">
             ФИТНЕС ОНЛАЙН
             <br />С КОЛЛЕКТИВНОЙ ПОДДЕРЖКОЙ
@@ -17,11 +21,15 @@
             <button
               class="btn mr-4 header__btn mt-3 pt-2 pb-2"
               @click="showModalAuth = !showModalAuth"
-            >ВОЙТИ</button>
+            >
+              ВОЙТИ
+            </button>
             <button
               class="btn ml-5 header__btn mt-3 pt-2 pb-2"
               @click="showModal = !showModal"
-            >ЗАРЕГИСТРИРОВАТЬСЯ</button>
+            >
+              ЗАРЕГИСТРИРОВАТЬСЯ
+            </button>
           </div>
         </div>
       </div>
@@ -29,7 +37,11 @@
     <main>
       <section class="main__advantages w-1200 container bck">
         <div class="row">
-          <img src="@/assets/img/levo.png" alt="levo" class="col-lg-2 main__img_left img-fluid" />
+          <img
+            src="@/assets/img/levo.png"
+            alt="levo"
+            class="col-lg-2 main__img_left img-fluid"
+          />
           <div class="main__advant_div col-10">
             <h2 class="mt-5 mb-5">
               ПРЕИМУЩЕСТВА ФИТНЕСА
@@ -38,37 +50,69 @@
             <div class="container mt-3">
               <div class="row mt-5">
                 <div class="advant col-lg-2 ml-5">
-                  <img src="@/assets/img/iron.png" alt="iron" class="img-fluid mx-auto d-block" />
+                  <img
+                    src="@/assets/img/iron.png"
+                    alt="iron"
+                    class="img-fluid mx-auto d-block"
+                  />
                   <p class="text-center mt-4">Преимущество 1</p>
                 </div>
                 <div class="advant col-lg-2 ml-5">
-                  <img src="@/assets/img/iron.png" alt="iron" class="img-fluid mx-auto d-block" />
+                  <img
+                    src="@/assets/img/iron.png"
+                    alt="iron"
+                    class="img-fluid mx-auto d-block"
+                  />
                   <p class="text-center mt-4">Преимущество 2</p>
                 </div>
                 <div class="advant col-lg-2 ml-5">
-                  <img src="@/assets/img/iron.png" alt="iron" class="img-fluid mx-auto d-block" />
+                  <img
+                    src="@/assets/img/iron.png"
+                    alt="iron"
+                    class="img-fluid mx-auto d-block"
+                  />
                   <p class="text-center mt-4">Преимущество 3</p>
                 </div>
                 <div class="advant col-lg-2 ml-5">
-                  <img src="@/assets/img/iron.png" alt="iron" class="img-fluid mx-auto d-block" />
+                  <img
+                    src="@/assets/img/iron.png"
+                    alt="iron"
+                    class="img-fluid mx-auto d-block"
+                  />
                   <p class="text-center mt-4">Преимущество 4</p>
                 </div>
               </div>
               <div class="row mt-5">
                 <div class="advant col-lg-2 ml-5">
-                  <img src="@/assets/img/iron.png" alt="iron" class="img-fluid mx-auto d-block" />
+                  <img
+                    src="@/assets/img/iron.png"
+                    alt="iron"
+                    class="img-fluid mx-auto d-block"
+                  />
                   <p class="text-center mt-4">Преимущество 1</p>
                 </div>
                 <div class="advant col-lg-2 ml-5">
-                  <img src="@/assets/img/iron.png" alt="iron" class="img-fluid mx-auto d-block" />
+                  <img
+                    src="@/assets/img/iron.png"
+                    alt="iron"
+                    class="img-fluid mx-auto d-block"
+                  />
                   <p class="text-center mt-4">Преимущество 2</p>
                 </div>
                 <div class="advant col-lg-2 ml-5">
-                  <img src="@/assets/img/iron.png" alt="iron" class="img-fluid mx-auto d-block" />
+                  <img
+                    src="@/assets/img/iron.png"
+                    alt="iron"
+                    class="img-fluid mx-auto d-block"
+                  />
                   <p class="text-center mt-4">Преимущество 3</p>
                 </div>
                 <div class="advant col-lg-2 ml-5">
-                  <img src="@/assets/img/iron.png" alt="iron" class="img-fluid mx-auto d-block" />
+                  <img
+                    src="@/assets/img/iron.png"
+                    alt="iron"
+                    class="img-fluid mx-auto d-block"
+                  />
                   <p class="text-center mt-4">Преимущество 4</p>
                 </div>
               </div>
@@ -118,7 +162,9 @@
     </main>
     <footer id="footer">
       <section class="footer_wrapper w-1200 bck container">
-        <div class="row d-flex justify-content-around pt-5 pb-4 position-relative">
+        <div
+          class="row d-flex justify-content-around pt-5 pb-4 position-relative"
+        >
           <div class="col-lg2 d-flex justify-content-between">
             <a class="ml-3" href="#">
               <i class="icon icon-iconmonstr-instagram-11"></i>
@@ -141,7 +187,11 @@
         </div>
       </section>
     </footer>
-    <RegisterForm v-if="showModal" @registration="onRegister" @close="showModal = false" />
+    <RegisterForm
+      v-if="showModal"
+      @registration="onRegister"
+      @close="showModal = false"
+    />
     <Authorization
       v-if="showModalAuth"
       @authorizations="showModalAuth = !showModalAuth"
