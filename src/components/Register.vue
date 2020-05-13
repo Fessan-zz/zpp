@@ -164,4 +164,5 @@ export default {
 
 <style lang="scss">
 @import '../assets/scss/registers.scss';
+@import '../assets/scss/ckeckour.scss';
 </style>

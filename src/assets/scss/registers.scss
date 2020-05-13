@@ -71,47 +71,6 @@
   transform: scale(1);
 }
 //--------------------------------------
-.check {
-  padding-left: 20px;
-  &__input {
-    position: absolute;
-    width: 1px; /*firefox*/
-    height: 1px; /*firefox*/
-    overflow: hidden; /*firefox*/
-    clip: rect(0 0 0 0); /*firefox*/
-  }
-
-  &__box {
-    position: absolute;
-    margin-top: 0px;
-    margin-left: -20px;
-    width: 13px;
-    height: 13px;
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    box-sizing: border-box;
-  }
-
-  &__text {
-    display: flex;
-    flex-direction: column;
-    margin-left: 2px;
-    margin-bottom: 30px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0.05em;
-    color: #333333;
-  }
-
-  &__input:checked + &__box {
-    fill: white;
-    background: url('../assets/img/checked.svg') center no-repeat;
-    //border: 1px solid #30b700; ../assets/img/checked.svg'
-
-  }
-}
 .header__btn-large {
   max-width: 333px;
   font-style: normal;

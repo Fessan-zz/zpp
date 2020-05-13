@@ -213,9 +213,9 @@
 
 <script>
 import RegisterForm from '@/components/Register.vue'
-import Authorization from '@/components/Authorization.vue'
-import SuccessRegister from '@/components/SuccessRegister.vue'
-import NotConfirmed from '@/components/NotConfirmed.vue'
+import Authorization from '@/components/auth/Authorization.vue'
+import SuccessRegister from '@/components/auth/SuccessRegister.vue'
+import NotConfirmed from '@/components/auth/NotConfirmed.vue'
 import Reviews from '@/components/ReviewsSlider.vue'
 
 export default {

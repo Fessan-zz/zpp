@@ -6,19 +6,16 @@
       :showCloseButton="false"
       @close="onClose"
     >
-      <span slot="header" class="form-modal__heading"
-        >ПОДТВЕРЖДЕНИЕ РЕГИСТРАЦИИ</span
-      >
+      <span slot="header" class="form-modal__heading">АКТИВАЦИЯ АККАУНТА</span>
       <div class slot="body">
         <div class="form-modal__text-block">
-          <p class="form-modal__text">Спасибо! Регистрация прошла успешно.</p>
           <p class="form-modal__text">
-            На Ваш адрес e-mail пользователя отправлено письмо. Для
-            подтверждения регистрации перейдите по ссылке, указанной в нем
+            Ваш аккаунт еще не активирован, проверьте адрес .
           </p>
+          <p class="form-modal__text">e-mail пользователя.</p>
         </div>
         <button type="submit" class="btn header__btn-large" @click="onClose">
-          ГОТОВО
+          ПОНЯТНО
         </button>
       </div>
     </Modal>
@@ -45,5 +42,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/scss/registers.scss';
+@import './src/assets/scss/registers.scss';
 </style>

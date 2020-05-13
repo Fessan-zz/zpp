@@ -51,7 +51,6 @@
 
 <script>
 import Modal from '@/components/Modal.vue'
-
 export default {
   name: 'authorization',
   components: {
@@ -71,7 +70,6 @@ export default {
         email: this.email,
         password: this.password
       }
-
       this.$store
         .dispatch('login', data)
         .then(resp => {
@@ -121,5 +119,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/scss/registers.scss';
+@import './src/assets/scss/registers.scss';
 </style>
