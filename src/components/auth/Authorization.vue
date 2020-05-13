@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import Modal from '@/components/Modal.vue'
+import Modal from '@/components/services/Modal.vue'
 export default {
   name: 'authorization',
   components: {
@@ -73,7 +73,8 @@ export default {
       this.$store
         .dispatch('login', data)
         .then(resp => {
-          if (resp.data.success == false) {/// не доделан вывод ошибок
+          if (resp.data.success == false) {
+            /// не доделан вывод ошибок
             // this.errArray = resp.data['0']
             if (resp.data.active == '0') {
               this.$emit('autorizationNotActive')

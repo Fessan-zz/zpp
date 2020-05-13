@@ -116,7 +116,7 @@
 </template>
 
 <script>
-import Modal from '@/components/Modal.vue'
+import Modal from '@/components/services/Modal.vue'
 
 export default {
   components: {
@@ -163,6 +163,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/scss/registers.scss';
-@import '../assets/scss/ckeckour.scss';
+@import '../../assets/scss/registers.scss';
 </style>

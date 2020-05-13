@@ -212,7 +212,7 @@
 </template>
 
 <script>
-import RegisterForm from '@/components/Register.vue'
+import RegisterForm from '@/components/auth/Register.vue'
 import Authorization from '@/components/auth/Authorization.vue'
 import SuccessRegister from '@/components/auth/SuccessRegister.vue'
 import NotConfirmed from '@/components/auth/NotConfirmed.vue'

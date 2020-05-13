@@ -12,7 +12,7 @@
               @click.prevent="close"
             >
               <img
-                src="../assets/img/close-modal.svg"
+                src="../../assets/img/close-modal.svg"
                 width="10"
                 heigth="10"
                 alt="closed registration form"
@@ -50,5 +50,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/scss/modal.scss';
+@import '../../assets/scss/modal.scss';
 </style>
