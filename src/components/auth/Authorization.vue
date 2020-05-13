@@ -39,9 +39,9 @@
               {{ errArray['password'] ? errArray['password'].toString() : '' }}
             </div>
           </div>
-          <div class="form-modal__link">
+          <a href="/" class="form-modal__link">
             У Вас нет аккаунта? Зарегистрируйтесь
-          </div>
+          </a>
           <button type="submit" class="btn header__btn-large">ВОЙТИ</button>
         </form>
       </div>
@@ -73,7 +73,7 @@ export default {
       this.$store
         .dispatch('login', data)
         .then(resp => {
-          if (resp.data.success == false) {
+          if (resp.data.success == false) {/// не доделан вывод ошибок
             // this.errArray = resp.data['0']
             if (resp.data.active == '0') {
               this.$emit('autorizationNotActive')

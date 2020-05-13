@@ -25,13 +25,14 @@ export default {
     }
   },
   actions: {
-    async register({ commit }, registerdata) {
+    async register({ commit }, registerData) {
       try {
         const resp = await axios({
           url: 'http://fessan.ru/api/signup',
-          data: registerdata, // data register  передача данных ч/з dispatch
+          data: registerData, // data register  передача данных ч/з dispatch
           method: 'POST'
         })
+        console.log(resp)
         return resp
       } catch (err) {
         commit('auth_error') // ошибка
@@ -39,11 +40,11 @@ export default {
         // throw err //
       }
     },
-    async login({ commit }, logindata) {
+    async login({ commit }, loginData) {
       try {
         const resp = await axios({
           url: `http://fessan.ru/api/login`,
-          data: logindata, // data register  передача данных ч/з dispatch
+          data: loginData, // data register  передача данных ч/з dispatch
           method: 'POST'
         })
         return resp

@@ -98,7 +98,7 @@
               <span class>Согласен с политикой конфиденциальности</span>
             </div>
           </label>
-          <div class="form-modal__policy" v-show="checked_policy == false">
+          <div class="form-modal__policy" v-show="checked_policy === false">
             “Необходимо указать, что вы согласны с политикой
             конфиденциальности”.
           </div>
@@ -144,7 +144,7 @@ export default {
       this.$store
         .dispatch('register', data)
         .then(resp => {
-          if (resp.data.success == true) {
+          if (resp.data.success === true) {
             this.$emit('showModalSuccessregister')
           }
           if (resp.data[0]) {
