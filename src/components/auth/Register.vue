@@ -149,6 +149,7 @@ export default {
           }
           if (resp.data[0]) {
             this.errArray = resp.data['0']
+            console.log(this.errArray)
           } else {
             this.$emit('registration')
           }

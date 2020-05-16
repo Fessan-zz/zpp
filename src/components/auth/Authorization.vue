@@ -22,6 +22,7 @@
             />
             <div class="form-modal__err">
               {{ errArray['email'] ? errArray['email'].toString() : '' }}
+              {{ errArray['message'] ? errArray['message'].toString() : '' }}
             </div>
           </div>
           <div class="form-block">
@@ -51,6 +52,7 @@
 
 <script>
 import Modal from '@/components/services/Modal.vue'
+
 export default {
   name: 'authorization',
   components: {
@@ -73,20 +75,25 @@ export default {
       this.$store
         .dispatch('login', data)
         .then(resp => {
+          console.log(resp.data)
           if (resp.data.success == false) {
-            /// не доделан вывод ошибок
-            // this.errArray = resp.data['0']
+            if (resp.data.message) {
+              this.errArray = resp.data
+            }
+            if (resp.data[0]) {
+              this.errArray = resp.data[0]
+            }
             if (resp.data.active == '0') {
               this.$emit('autorizationNotActive')
-              //окно учетка неактивна (модалка)
               return
             }
-            //ошибки
           } else {
+            console.log(resp.data, ' in true')
             const token = resp.data['0'].api_token
             const userI = resp.data['0']
             localStorage.setItem('api_token', token)
-            localStorage.setItem('id', userI.id),
+            localStorage.setItem('id', userI.id)
+            localStorage.setItem('email', userI.email),
               this.$store.commit('auth_success', { token, userI })
             //axios.defaults.headers.common['Authorization'] = token
             if (resp.data['0'].role == 'trainer') {
@@ -107,7 +114,7 @@ export default {
             }
           }
 
-          this.$emit('close')
+          // this.$emit('close')
         })
         .catch(err => console.log(err))
     },
