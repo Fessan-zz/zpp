@@ -83,9 +83,8 @@
   background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #F2F2F2;
   box-shadow: 0px 0px 15px #BBF417;
   position: relative;
-}
 
-.figure{
+  .figure{
     max-width: 510px;
     max-height: 900px;
     width: 100%;
@@ -94,11 +93,11 @@
     background: linear-gradient(216.08deg, #C2FA4D 22.65%, rgba(255, 255, 255, 0) 78.56%), linear-gradient(139.02deg, #DEFF7E 20.18%, #C4F142 85.95%), #CBF74F;
     position: absolute;
     top: 0;
-    right: 4%;
+    right: 11%;
     z-index: 0;
-}
+  }
 
-.profile__main_h1 h1{
+  .profile__main_h1 h1{
   text-transform: uppercase;
   z-index: 1;
   font-family: Montserrat;
@@ -110,27 +109,117 @@
   color: #4F4F4F;
   }
 
-.profile__main_anketa{
+  &_anketa{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 22px;
+    z-index: 5;
+
+    &_photo{
+      margin-top: 100px;
+      width: 186px;
+      height: 186px;
+    }
+
+    &_text_wrapper h3{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.05em;
+      color: #4F4F4F;
+      }
+    
+    }
+    .main__profile_anketa_btn{
+      background:none;
+      outline:none;
+      padding:0;
+      margin: 0;
+      border: none;
+      color: inherit;
+      position: relative;
+      margin: auto;
+      padding: 12px 22px;
+      transition: all .2s ease;
+      &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border-radius: 28px;
+        background: rgba(203,247,79,.5);
+        width: 45px;
+        height: 45px;
+        transition: all .3s ease;
+      }
+      span{
+        position: relative;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.1em;
+        color: #333333;
+        text-transform: uppercase;
+        vertical-align: middle;
+      }
+      &:hover{
+        &:before {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        background: rgba(203,247,79,1);
+        }
+    
+      }
+
+
+
+  }
+
+  .profile__main_anketa_first{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: #4F4F4F;
+  }
+  .profile__main__anketa_last{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.05em;  
+    color: #4F4F4F;
+  }
+}
+
+.h3{
+  margin-top: 55px !important;
+}
+
+.profile__main_water{
   background: #FFFFFF;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
   border-radius: 22px;
-}
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+  margin-left: 85px;
 
-.profile__main_name{
-  margin-top: 50px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
-  letter-spacing: 0.05em;
-  color: #4F4F4F;
-}
-
-.profile__main_btn{
-  background:none;
-  outline:none;
-  padding:0;
-  margin: 0;
-  margin-top: 50px;
+  & h3{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    color: #4F4F4F;
+    margin-top: 55px;
+    text-align: center;
+  }
 }
