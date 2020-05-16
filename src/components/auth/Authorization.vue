@@ -75,7 +75,6 @@ export default {
       this.$store
         .dispatch('login', data)
         .then(resp => {
-          console.log(resp.data)
           if (resp.data.success == false) {
             if (resp.data.message) {
               this.errArray = resp.data
@@ -88,7 +87,6 @@ export default {
               return
             }
           } else {
-            console.log(resp.data, ' in true')
             const token = resp.data['0'].api_token
             const userI = resp.data['0']
             localStorage.setItem('api_token', token)

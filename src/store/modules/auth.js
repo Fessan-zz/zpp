@@ -32,7 +32,6 @@ export default {
           data: registerData, // data register  передача данных ч/з dispatch
           method: 'POST'
         })
-        console.log(resp)
         return resp
       } catch (err) {
         commit('auth_error') // ошибка

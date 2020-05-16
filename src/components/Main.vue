@@ -4,7 +4,7 @@
       <div class="row">
         <div class="wrapper_header ml-5 col-lg-8">
           <img
-            src="@/assets/img/zeleny.png"
+            src="@/assets/img/logo.png"
             alt="logo"
             class="logo mt-5 img-fluid"
           />
@@ -167,16 +167,16 @@
         >
           <div class="col-lg2 d-flex justify-content-between">
             <a class="ml-3" href="#">
-              <i class="icon icon-iconmonstr-instagram-11"></i>
+              <i class="icon icon-inst"></i>
             </a>
             <a class="ml-3" href="#">
-              <i class="icon icon-iconmonstr-whatsapp-1"></i>
+              <i class="icon icon-whatsup"></i>
             </a>
             <a class="ml-3" href="#">
-              <i class="icon icon-iconmonstr-twitter-1"></i>
+              <i class="icon icon-tw"></i>
             </a>
             <a class="ml-3" href="#">
-              <i class="icon icon-iconmonstr-vk-1"></i>
+              <i class="icon icon-vk"></i>
             </a>
           </div>
           <a href="#" class="col-lg2 footer_a">Кратко о проекте</a>

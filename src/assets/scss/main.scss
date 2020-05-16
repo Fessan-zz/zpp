@@ -23,18 +23,24 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.icon-iconmonstr-whatsapp-1:before {
+.icon-search:before {
   content: "\e900";
 }
-.icon-iconmonstr-vk-1:before {
+.icon-tw:before {
   content: "\e901";
+  color: #f5f5f5;
 }
-.icon-iconmonstr-instagram-11:before {
+.icon-whatsup:before {
   content: "\e902";
+  color: #f5f5f5;
 }
-.icon-iconmonstr-twitter-1:before {
+.icon-vk:before {
   content: "\e903";
+  color: #f5f5f5;
+}
+.icon-inst:before {
+  content: "\e904";
+  color: #f5f5f5;
 }
 
 .icon {

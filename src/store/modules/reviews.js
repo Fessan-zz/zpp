@@ -16,7 +16,6 @@ export default {
           url: 'http://fessan.ru/api/feed-back',
           method: 'GET'
         })
-        // console.log(data.data[0][0].feedback, 'this data in action')
         commit('setReviews', data.data[0][0].feedback)
       } catch (err) {
         console.log(err)

@@ -1,9 +1,15 @@
 <template>
-  <div>Hello, USER</div>
+  <div>
+    <profile />
+  </div>
 </template>
 
 <script>
-export default {}
+import Profile from '@/components/profile/Profile.vue'
+export default {
+  name: 'ProfileAll',
+  components: { Profile }
+}
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss"></style>
