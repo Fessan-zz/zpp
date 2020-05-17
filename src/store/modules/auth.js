@@ -56,8 +56,7 @@ export default {
     logout({ commit }) {
       return new Promise(resolve => {
         commit('logout')
-        localStorage.removeItem('api_token')
-        localStorage.removeItem('name')
+        localStorage.clear()
         delete axios.defaults.headers.common.Authorization
         resolve()
       })
