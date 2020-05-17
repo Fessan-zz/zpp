@@ -21,7 +21,10 @@
                     class="main__profile_text_wrapper d-flex justify-content-around"
                   >
                     <h3 class="h3">Виктория Резяпова</h3>
-                    <button class="main__profile_anketa_btn ml-4 mt-5">
+                    <button
+                      class="main__profile_anketa_btn ml-4 mt-5"
+                      @click="showAnket = !showAnket"
+                    >
                       <span>Изменить</span>
                     </button>
                   </div>
@@ -268,13 +271,30 @@
         </div>
       </section>
     </div>
+    <AnketaForm
+      v-if="showAnket"
+      @complitAnket="complit"
+      @close="showAnket = false"
+    />
   </div>
 </template>
 
 <script>
 import NavBar from './NavBarProfile.vue'
+import AnketaForm from './Anketa.vue'
+
 export default {
-  components: { NavBar }
+  components: { NavBar, AnketaForm },
+  data() {
+    return {
+      showAnket: false
+    }
+  },
+  methods: {
+    complit() {
+      this.showAnket = false
+    }
+  }
 }
 </script>
 
