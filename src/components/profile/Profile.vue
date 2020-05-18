@@ -10,85 +10,153 @@
           </div>
           <div class="container">
             <div class="row">
-
-<!-- Здесь анкета --> 
+              <!-- Здесь анкета -->
               <Anketa />
               <div class="col-lg-3 profile__main_water mb-5">
                 <h3>Трекер воды</h3>
-                <div class="profile__main_water_cont ml-5">
-                  <div class="profile__water_items d-flex flex-wrap">
-                    <div class="ml-2 mt-2">
-                      <img
-                        src="../../assets/img/blueWater.png"
-                        alt="water"
-                        class="profile__water_item_b mb-2"
-                      />
-                      <br />
-                      <span>250 мл</span>
-                    </div>
-                    <div class="ml-2 mt-2">
-                      <img
-                        src="../../assets/img/blueWater.png"
-                        alt="water"
-                        class="profile__water_item_b mb-2"
-                      />
-                      <br />
-                      <span>250 мл</span>
-                    </div>
-                    <div class="ml-2 mt-2">
-                      <img
-                        src="../../assets/img/blueWater.png"
-                        alt="water"
-                        class="profile__water_item_b mb-2"
-                      />
-                      <br />
-                      <span>250 мл</span>
-                    </div>
-                    <div class="ml-2 mt-2">
-                      <img
-                        src="../../assets/img/blueWater.png"
-                        alt="water"
-                        class="profile__water_item_b mb-2"
-                      />
-                      <br />
-                      <span>250 мл</span>
-                    </div>
-                    <div class="ml-2 mt-2">
-                      <img
-                        src="../../assets/img/water.png"
-                        alt="water"
-                        class="profile__water_item_b mb-2"
-                      />
-                      <br />
-                      <span>250 мл</span>
-                    </div>
-                    <div class="ml-2 mt-2">
-                      <img
-                        src="../../assets/img/water.png"
-                        alt="water"
-                        class="profile__water_item_b mb-2"
-                      />
-                      <br />
-                      <span>250 мл</span>
-                    </div>
-                    <div class="ml-2 mt-2 mb-4">
-                      <img
-                        src="../../assets/img/water.png"
-                        alt="water"
-                        class="profile__water_item_b mb-2"
-                      />
-                      <br />
-                      <span>250 мл</span>
-                    </div>
-                    <div class="ml-2 mt-2 mb-4">
-                      <img
-                        src="../../assets/img/water.png"
-                        alt="water"
-                        class="profile__water_item_b mb-2"
-                      />
-                      <br />
-                      <span>250 мл</span>
-                    </div>
+                <div class="profile__main_water_items m-3 d-flex flex-wrap">
+                  <div class="profile__main_water_item">
+                    <img
+                      src="../../assets/img/blueWater.png"
+                      alt="water"
+                      class="m-2"
+                    />
+                    <br />
+                    <span>250 мл</span>
+                  </div>
+                  <div class="profile__main_water_item">
+                    <img
+                      src="../../assets/img/blueWater.png"
+                      alt="water"
+                      class="m-2"
+                    />
+                    <br />
+                    <span>250 мл</span>
+                  </div>
+                  <div class="profile__main_water_item">
+                    <img
+                      src="../../assets/img/blueWater.png"
+                      alt="water"
+                      class="m-2"
+                    />
+                    <br />
+                    <span>250 мл</span>
+                  </div>
+                  <div class="profile__main_water_item">
+                    <img
+                      src="../../assets/img/blueWater.png"
+                      alt="water"
+                      class="m-2"
+                    />
+                    <br />
+                    <span>250 мл</span>
+                  </div>
+                  <div class="profile__main_water_item">
+                    <img
+                      src="../../assets/img/blueWater.png"
+                      alt="water"
+                      class="m-2"
+                    />
+                    <br />
+                    <span>250 мл</span>
+                  </div>
+                  <div class="profile__main_water_item">
+                    <img
+                      src="../../assets/img/water.png"
+                      alt="water"
+                      class="m-2"
+                    />
+                    <img
+                      src="../../assets/img/waterClose.png"
+                      alt="close"
+                      class="profile__main_water_close"
+                    />
+                    <br />
+                    <span>250 мл</span>
+                  </div>
+                  <div class="profile__main_water_item">
+                    <img
+                      src="../../assets/img/water.png"
+                      alt="water"
+                      class="m-2"
+                    />
+                    <img
+                      src="../../assets/img/waterClose.png"
+                      alt="close"
+                      class="profile__main_water_close"
+                    />
+                    <br />
+                    <span>250 мл</span>
+                  </div>
+                  <div class="profile__main_water_item">
+                    <img
+                      src="../../assets/img/water.png"
+                      alt="water"
+                      class="m-2"
+                    />
+                    <img
+                      src="../../assets/img/waterClose.png"
+                      alt="close"
+                      class="profile__main_water_close"
+                    />
+                    <br />
+                    <span>250 мл</span>
+                  </div>
+                  <div class="profile__main_water_item">
+                    <img
+                      src="../../assets/img/water.png"
+                      alt="water"
+                      class="m-2"
+                    />
+                    <img
+                      src="../../assets/img/waterClose.png"
+                      alt="close"
+                      class="profile__main_water_close"
+                    />
+                    <br />
+                    <span>250 мл</span>
+                  </div>
+                  <div class="profile__main_water_item">
+                    <img
+                      src="../../assets/img/water.png"
+                      alt="water"
+                      class="m-2"
+                    />
+                    <img
+                      src="../../assets/img/waterClose.png"
+                      alt="close"
+                      class="profile__main_water_close"
+                    />
+                    <br />
+                    <span>250 мл</span>
+                  </div>
+                  <div class="profile__main_water_item">
+                    <img
+                      src="../../assets/img/water.png"
+                      alt="water"
+                      class="m-2"
+                    />
+                    <img
+                      src="../../assets/img/waterClose.png"
+                      alt="close"
+                      class="profile__main_water_close"
+                    />
+                    <br />
+                    <span>250 мл</span>
+                  </div>
+                  <div class="profile__main_water_item">
+                    <img
+                      src="../../assets/img/water.png"
+                      alt="water"
+                      class="m-2"
+                    />
+                    <img
+                      src="../../assets/img/waterClose.png"
+                      alt="close"
+                      class="profile__main_water_close"
+                    />
+                    <br />
+                    <span>250 мл</span>
                   </div>
                 </div>
               </div>
@@ -165,40 +233,11 @@
                 </div>
               </div>
               <div class="col-lg-7 profile__main_eat ml-5 mb-5">
-                <span
-                  class="profile__main_anketa_first ml-2 d-inline-block mt-4"
-                  >Завтрак:</span
-                >
-                <span
-                  class="profile__main__anketa_last ml-2 d-inline-block mt-4"
-                  >Яйца вареные, молоко сгущеное</span
-                >
-                <br />
-                <span
-                  class="profile__main_anketa_first ml-2 d-inline-block mt-4"
-                  >Обед:</span
-                >
-                <span
-                  class="profile__main__anketa_last ml-2 d-inline-block mt-4"
-                  >Рог коня, хвост гуся</span
-                >
-                <br />
-                <span
-                  class="profile__main_anketa_first ml-2 d-inline-block mt-4"
-                  >Ужин:</span
-                >
-                <button type="button" class="profile__main_eat_btn ml-3">
-                  <img src="../../assets/img/plus.png" alt="btn" />
-                </button>
-                <br />
-                <span
-                  class="profile__main_anketa_first ml-2 d-inline-block mt-4"
-                  >Перекус:</span
-                >
-                <button type="button" class="profile__main_eat_btn ml-3">
-                  <img src="../../assets/img/plus.png" alt="btn" />
-                </button>
-                <br />
+                <h3 class="mt-4 ">График изменения веса</h3>
+                <img src="../../assets/img/grafik.png" alt="grafik">
+                <span class="profile__main_eat_span mx-5 mb-5">Апрель</span>
+                <span class="profile__main_eat_span  ml-3 active_span mb-5">Май</span>
+                <button type="button" class="justify-content-end"> <img src="../../assets/img/plus.png" alt="button"></button>
               </div>
             </div>
           </div>
