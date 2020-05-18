@@ -1,169 +1,49 @@
 <template>
-  <div class="">
-    <Modal
-      :showCloseCross="true"
-      :showActionButton="true"
-      :showCloseButton="false"
-      @close="onClose"
-    >
-      <span slot="header" class="form-modal__heading">АНКЕТА КЛИЕНТА</span>
-      <span slot="actionButtonText">Заполните личную информацию</span>
-      <span slot="closeButtonText">---Меня не видно</span>
-      <div class slot="body">
-        <form class @submit.prevent="complit">
-          <div class="form-block">
-            <label for="surname" class="form-modal__label">Фамилия:</label>
-            <input
-              type="text"
-              name="surname"
-              class="form-modal__input"
-              v-model="surname"
-              required
-            />
-            <div class="form-modal__err">
-              {{ errArray['surname'] ? errArray['surname'].toString() : '' }}
-            </div>
-          </div>
-          <div class="form-block">
-            <label for="name" class="form-modal__label">Имя:</label>
-            <input
-              type="text"
-              name="name"
-              class="form-modal__input"
-              v-model="name"
-              required
-            />
-            <div class="form-modal__err">
-              {{ errArray['name'] ? errArray['name'].toString() : '' }}
-            </div>
-          </div>
-
-          <div class="form-block">
-            <label for="height" class="form-modal__label">Рост:</label>
-            <input
-              type="number"
-              name="height"
-              class="form-modal__input"
-              v-model="height"
-              size="3"
-              required
-            />
-            <div class="form-modal__err">
-              {{ errArray['height'] ? errArray['height'].toString() : '' }}
-            </div>
-          </div>
-
-          <div class="form-block">
-            <label for="weight" class="form-modal__label">Вес:</label>
-            <input
-              type="number"
-              name="weight"
-              class="form-modal__input"
-              v-model="weight"
-              size="3"
-              required
-            />
-            <div class="form-modal__err">
-              {{ errArray['weight'] ? errArray['weight'].toString() : '' }}
-            </div>
-          </div>
-
-          <div class="form-block">
-            <label for="dateBirth" class="form-modal__label"
-              >Дата Рождения:</label
-            >
-            <input
-              type="data"
-              name="dateBirth"
-              class="form-modal__input"
-              v-model="dateBirth"
-              required
-            />
-            <div class="form-modal__err">
-              {{
-                errArray['dateBirth'] ? errArray['dateBirth'].toString() : ''
-              }}
-            </div>
-          </div>
-
-          <div class="form-block">
-            <label for="selfActions" class="form-modal__label"
-              >Физическая Активность:</label
-            >
-            <input
-              type="text"
-              name="selfActions"
-              class="form-modal__input"
-              v-model="selfActions"
-              required
-            />
-            <div class="form-modal__err">
-              {{
-                errArray['selfActions']
-                  ? errArray['selfActions'].toString()
-                  : ''
-              }}
-            </div>
-          </div>
-
-          <div class="form-block">
-            <label for="self" class="form-modal__label">О себе:</label>
-            <textarea
-              name="self"
-              class="form-modal__input"
-              v-model="self"
-              required
-              maxlength="200"
-              rows="5"
-            />
-            <div class="form-modal__err">
-              {{ errArray['self'] ? errArray['self'].toString() : '' }}
-            </div>
-          </div>
-<!-- как грузить аву?? -->
-
-
-          <div class="radio-buttons">
-            <div class="radio-buttons-role">
-              <input
-                class="radio-buttons-role__input"
-                type="radio"
-                id="man"
-                name="sex"
-                value="man"
-                v-model="sex"
-                checked
-              />
-              <label for="man" class="radio-buttons-role__label">Мужчина</label>
-            </div>
-            <div class="radio-buttons-role">
-              <input
-                class="radio-buttons-role__input"
-                type="radio"
-                id="trainer"
-                name="sex"
-                value="woman"
-                v-model="sex"
-              />
-              <label for="woman" class="radio-buttons-role__label"
-                >Женщина</label
-              >
-            </div>
-          </div>
-
-          <button type="submit" class="btn header__btn-large">
-            Изменить
-          </button>
-        </form>
+  <div class="col-lg-8 profile__main_anketa d-flex ml-3 mb-5">
+    <img
+      src="../../assets/img/ava.png"
+      alt="photo"
+      class="profile__main_anketa_photo img-fluid ml-3"
+    />
+    <div class="profile__main_anketa_text">
+      <div class="main__profile_text_wrapper d-flex justify-content-around">
+        <h3 class="h3">Виктория Резяпова</h3>
+        <button class="main__profile_anketa_btn ml-4 mt-5" @click="showAnket = !showAnket">
+          <span>Изменить</span>
+        </button>
       </div>
-    </Modal>
+      <div class="profile__main_text_items mt-3">
+        <span class="profile__main_anketa_first ml-2 d-inline-block">Возраст:</span>
+        <span class="profile__main__anketa_last ml-2 d-inline-block">20 лет</span>
+        <br />
+        <span class="profile__main_anketa_first ml-2 d-inline-block">Вес:</span>
+        <span class="profile__main__anketa_last ml-2 d-inline-block">40 кг</span>
+        <br />
+        <span class="profile__main_anketa_first ml-2 d-inline-block">Рост:</span>
+        <span class="profile__main__anketa_last ml-2 d-inline-block">170 см</span>
+        <br />
+        <span class="profile__main_anketa_first ml-2 d-inline-block">Физическая активность:</span>
+        <span class="profile__main__anketa_last ml-2 d-inline-block">Экстремально высокая</span>
+        <br />
+        <span class="profile__main_anketa_first ml-2 d-inline-block">Цель тренировок:</span>
+        <span class="profile__main__anketa_last ml-2 d-inline-block">Поддерживать тонус</span>
+        <br />
+        <span class="profile__main_anketa_first ml-2 d-inline-block">Цель тренировок:</span>
+        <br />
+        <span class="profile__main__anketa_last ml-2 d-inline-block mb-5">
+          Мое тело - металл, противопоказаний нет, железный
+          не иначе. Мое тело - металл, противопоказаний нет,
+          нет, железный человек, не иначе.Мое тело - металл,
+          противопоказаний нет, железный человек, не иначе.
+        </span>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import Modal from '@/components/services/Modal.vue'
 export default {
-  components: { Modal },
+  components: {},
   data() {
     return {
       errArray: {},
