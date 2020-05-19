@@ -11,7 +11,8 @@
           <div class="container">
             <div class="row">
               <!-- Здесь анкета -->
-              <Anketa />
+              <Anketa v-if="showAnket" />
+              <div v-else>был клик</div>
               <div class="col-lg-3 profile__main_water mb-5">
                 <h3>Трекер воды</h3>
                 <div class="profile__main_water_items m-3 d-flex flex-wrap">
@@ -167,38 +168,14 @@
               <div class="col-lg-4 profile__main_tracker ml-3 mb-5">
                 <div class="m-4">
                   <div
-                    class="profile__main_tracker_items d-flex justify-content-between mt-3"
+                    class="profile__main_tracker_items d-flex  flex-column justify-content-center align-items-center mt-3 mb-3"
                   >
-                    <div
-                      class="profile__main_tracker_item d-flex flex-column justify-content-center align-items-center"
-                    >
-                      <span class="profile__main_tracker_item_span"
-                        >Набрано</span
-                      >
-                      <span class="profile__main_tracker_item_num">545</span>
-                      <span class="profile__main_tracker_item_kkl">Ккал</span>
-                    </div>
-                    <div
-                      class="profile__main_tracker_item d-flex flex-column justify-content-center align-items-center"
-                    >
-                      <span class="profile__main_tracker_item_span"
-                        >Осталось</span
-                      >
-                      <span class="profile__main_tracker_item_num red">45</span>
-                      <span class="profile__main_tracker_item_kkl">Ккал</span>
-                    </div>
-                    <div
-                      class="profile__main_tracker_item d-flex flex-column justify-content-center align-items-center"
-                    >
-                      <span class="profile__main_tracker_item_span"
-                        >Сброшено</span
-                      >
-                      <span class="profile__main_tracker_item_num">545</span>
-                      <span class="profile__main_tracker_item_kkl">Ккал</span>
-                    </div>
+                    <h4>Необходимая норма</h4>
+                    <div class="profile__main__tracker--big--red">1500</div>
+                    <div class="profile__main__tracker--big--item">Ккал</div>
                   </div>
                   <div
-                    class="profile__main_tracker_items d-flex justify-content-between mt-3"
+                    class="profile__main_tracker_items d-flex justify-content-between mt-5"
                   >
                     <div
                       class="profile__main_tracker_item d-flex flex-column justify-content-center align-items-center"
@@ -233,7 +210,7 @@
                 </div>
               </div>
               <div class="col-lg-7 profile__main_eat ml-5 mb-5">
-                <h3 class="mt-4 ">График изменения веса</h3>
+                <h4 class="mt-4 ">График изменения веса</h4>
                 <img src="../../assets/img/grafik.png" alt="grafik" /><span
                   class="profile__main_eat_span mx-5 mb-5"
                   >Апрель</span
@@ -241,32 +218,26 @@
                 <span class="profile__main_eat_span  ml-3 active_span mb-5"
                   >Май</span
                 >
-                <button type="button" class="">
-                  <img src="../../assets/img/plus.png" alt="button" />
-                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <Footer />
     </div>
-    <!-- <AnketaForm
-      v-if="showAnket"
-      @complitAnket="complit"
-      @close="showAnket = false"
-    /> -->
   </div>
 </template>
 
 <script>
 import NavBar from './NavBarProfile.vue'
 import Anketa from './Anketa.vue'
+import Footer from './Footer.vue'
 
 export default {
-  components: { NavBar, Anketa },
+  components: { NavBar, Anketa, Footer },
   data() {
     return {
-      showAnket: false
+      showAnket: true
     }
   },
   methods: {

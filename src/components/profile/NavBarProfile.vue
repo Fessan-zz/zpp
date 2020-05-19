@@ -8,26 +8,25 @@
         <div class="d-flex justify-content-center align-items-center">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link ml-2" href="#">Главная</a>
+              <a class="nav-link ml-2" href="#">Мои тренировки</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-2" href="#">Программа тренировок</a>
+              <a class="nav-link ml-2" href="#">Тренеры</a>
             </li>
             <li class="nav-item">
               <a class="nav-link ml-2" href="#">Рецепты</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-2" href="#">Блог</a>
+              <a class="nav-link ml-2" href="#">Чат</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link ml-2" href="#">
+            <li class="nav-item">
+              <a class="nav-link ml-2 active_link" href="#">
                 Личный кабинет
-                <span class="sr-only">(current)</span>
               </a>
             </li>
           </ul>
           <form class="form-inline my-2">
-            <input class="profile__header_search" type="search" aria-label="Search" />
+            <input class="profile__header_search ml-3" type="search" aria-label="Search" />
             <button type="submit" class="profile__header_search_btn">
               <i class="icon-search"></i>
             </button>

@@ -95,7 +95,6 @@ export default {
               this.$store.commit('auth_success', { token, userI })
             //axios.defaults.headers.common['Authorization'] = token
             if (resp.data['0'].role == 'trainer') {
-              alert(resp.data['0'].role)
               this.$router.push({
                 name: 'profiletrainer',
                 params: { id: userI.id }
@@ -103,7 +102,6 @@ export default {
               //открыть кабинет тренера
             }
             if (resp.data['0'].role == 'user') {
-              alert(resp.data['0'].role)
               this.$router.push({
                 name: 'profileuser',
                 params: { id: userI.id }
