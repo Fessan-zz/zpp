@@ -234,10 +234,16 @@
               </div>
               <div class="col-lg-7 profile__main_eat ml-5 mb-5">
                 <h3 class="mt-4 ">График изменения веса</h3>
-                <img src="../../assets/img/grafik.png" alt="grafik">
-                <span class="profile__main_eat_span mx-5 mb-5">Апрель</span>
-                <span class="profile__main_eat_span  ml-3 active_span mb-5">Май</span>
-                <button type="button" class="justify-content-end"> <img src="../../assets/img/plus.png" alt="button"></button>
+                <img src="../../assets/img/grafik.png" alt="grafik" /><span
+                  class="profile__main_eat_span mx-5 mb-5"
+                  >Апрель</span
+                >
+                <span class="profile__main_eat_span  ml-3 active_span mb-5"
+                  >Май</span
+                >
+                <button type="button" class="">
+                  <img src="../../assets/img/plus.png" alt="button" />
+                </button>
               </div>
             </div>
           </div>
