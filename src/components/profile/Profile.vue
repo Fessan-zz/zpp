@@ -12,7 +12,9 @@
             <div class="row">
               <!-- Здесь анкета -->
               <Anketa v-if="showAnket" />
-              <div v-else>был клик</div>
+              <FormAnket 
+              v-else
+              />
               <div class="col-lg-3 profile__main_water mb-5">
                 <h3>Трекер воды</h3>
                 <div class="profile__main_water_items m-3 d-flex flex-wrap">
@@ -231,19 +233,18 @@
 <script>
 import NavBar from './NavBarProfile.vue'
 import Anketa from './Anketa.vue'
+import FormAnket from './AnketForm.vue'
 import Footer from './Footer.vue'
+import { mapGetters } from 'vuex'
 
 export default {
-  components: { NavBar, Anketa, Footer },
+  components: { NavBar, Anketa, Footer, FormAnket },
   data() {
-    return {
-      showAnket: true
-    }
+    return {}
   },
-  methods: {
-    complit() {
-      this.showAnket = false
-    }
+  methods: {},
+  computed: {
+    ...mapGetters(['showAnket'])
   }
 }
 </script>

@@ -11,13 +11,31 @@ export default {
       infoSelf:
         'Мое тело - металл, противопоказаний нет, железный человек, не иначе. Мое тело - металл, противопоказаний нет, железный человек, не иначе.Мое тело - металл, противопоказаний нет, железный человек, не иначе.',
       gender: 'женский'
+    },
+    showAnket: true
+  },
+  mutations: {
+    showAnketFalse(state) {
+      state.showAnket = false
+    },
+    showAnketTrue(state) {
+      state.showAnket = true
     }
   },
-  mutations: {},
-  actions: {},
+  actions: {
+    openFormAnket({ commit }) {
+      commit('showAnketFalse')
+    },
+    closeFormAnket({ commit }) {
+      commit('showAnketTrue')
+    }
+  },
   getters: {
     allInfoUser(state) {
       return state.user
+    },
+    showAnket(state) {
+      return state.showAnket
     }
   }
 }

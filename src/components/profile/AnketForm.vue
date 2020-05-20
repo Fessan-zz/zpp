@@ -17,12 +17,12 @@
     <div class="profile__main_anketa_text ml-4">
       <div class="main__profile_text_wrapper d-flex justify-content-around">
         <h3 class="h3">
-          {{ allInfoUser.first_name }} {{ allInfoUser.second_name }}
+        adsadsadasda sdasd sadsa asdsa d
         </h3>
         <button class="main__profile_anketa_btn ml-4 mt-5"
-        @click="openRedactForm"
+        @click="closeRedactForm"
         >
-          <span>Изменить</span>
+          <span>Сохранить</span>
         </button>
       </div>
       <div class="profile__main_text_items mt-3">
@@ -76,25 +76,16 @@
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
-  components: {},
-  data() {
-    return {}
+  methods: {
+    closeRedactForm() {
+      console.log(' здесь сохраняется форма')
+      this.$store.dispatch('closeFormAnket')
+    }
   },
   computed: {
     ...mapGetters(['allInfoUser'])
-  },
-  methods: {
-    openRedactForm() {
-      console.log(' здесь открывает через экшен другая форма')
-      this.$store.dispatch('openFormAnket')
-    }
-  },
-  mounted() {
-    console.log('allInfoUser')
   }
 }
 </script>
 
-<style lang="scss">
-@import '../../assets/scss/registers.scss';
-</style>
+<style lang="scss"></style>
