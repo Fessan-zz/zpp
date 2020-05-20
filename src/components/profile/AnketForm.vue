@@ -1,11 +1,21 @@
 <template>
   <div class="col-lg-8 profile__main_anketa d-flex ml-3 mb-5">
     <div class="profile__main--anketa--left">
-      <img
-        src="../../assets/img/ava.png"
-        alt="photo"
-        class="profile__main_anketa_photo img-fluid ml-3"
-      />
+      <div class="position-relative">
+        <img
+          src="../../assets/img/ava.png"
+          alt="photo"
+          class="profile__main_anketa_photo img-fluid ml-3"
+        />
+        <button>
+          <img
+            src="../../assets/img/plusFormAnket.png"
+            alt="add avatar"
+            class="position-absolute profile__main--ava--plus"
+          />
+        </button>
+      </div>
+
       <div class="mt-3 text-center">
         <span class="profile__main_anketa_first ml-2 d-inline-block">Пол:</span>
         <span class="profile__main__anketa_last ml-2 d-inline-block mb-5">
@@ -16,11 +26,10 @@
 
     <div class="profile__main_anketa_text ml-4">
       <div class="main__profile_text_wrapper d-flex justify-content-around">
-        <h3 class="h3">
-        adsadsadasda sdasd sadsa asdsa d
-        </h3>
-        <button class="main__profile_anketa_btn ml-4 mt-5"
-        @click="closeRedactForm"
+        <h3 class="h3"></h3>
+        <button
+          class="main__profile_anketa_btn ml-4 mt-5"
+          @click="closeRedactForm"
         >
           <span>Сохранить</span>
         </button>
@@ -76,6 +85,9 @@
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
+  data() {
+    return {}
+  },
   methods: {
     closeRedactForm() {
       console.log(' здесь сохраняется форма')

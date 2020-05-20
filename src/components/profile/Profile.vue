@@ -12,9 +12,7 @@
             <div class="row">
               <!-- Здесь анкета -->
               <Anketa v-if="showAnket" />
-              <FormAnket 
-              v-else
-              />
+              <FormAnket v-else />
               <div class="col-lg-3 profile__main_water mb-5">
                 <h3>Трекер воды</h3>
                 <div class="profile__main_water_items m-3 d-flex flex-wrap">

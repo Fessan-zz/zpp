@@ -1,3 +1,13 @@
+button, input{
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
 .profile{
   background-color: #E5E5E5;
 }
@@ -31,29 +41,14 @@
     letter-spacing: 0.05em;
     color: #4F4F4F;
 
+
+
     .profile__header_logo{
       width: 64px;
       height: 42px;
     }
-
-    &_search{
-      border:none;
-      background:none;
-      outline:none;
-      padding:0;
-      margin: 0;
-      border-bottom: 1px solid rgb(122, 119, 119);
-      max-width: 110px;
+    .profile__header_wr{
       width: 100%;
-    }
-
-    &_search_btn{
-      border:none;
-      background:none;
-      outline:none;
-      padding:0;
-      margin: 0;
-      color: rgb(122, 119, 119);
     }
 
     &_right{
@@ -67,10 +62,6 @@
     }
 
     &_right_btn{
-      background:none;
-      outline:none;
-      padding:0;
-      margin: 0;
       border: 2px solid #CBF74F;
       box-sizing: border-box;
       border-radius: 18px;
@@ -144,12 +135,6 @@
     
     }
     .main__profile_anketa_btn{
-      background:none;
-      outline:none;
-      padding:0;
-      margin: 0;
-      border: none;
-      color: inherit;
       position: relative;
       margin: auto;
       padding: 12px 22px;
@@ -324,12 +309,6 @@
 
 
   & button{
-    background:none;
-    outline:none;
-    padding:0;
-    margin: 0;
-    border: none;
-    color: inherit;
     margin-bottom: 18px;
     margin-left: 60%;
   }
@@ -382,4 +361,12 @@
 }
 .icon:hover {
   color: #BBF417 !important;
+}
+
+
+/////// this anketForm.vue////////
+
+.profile__main--ava--plus{
+  right: 9%;
+  bottom: 14%;
 }
