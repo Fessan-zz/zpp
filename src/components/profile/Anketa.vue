@@ -19,8 +19,9 @@
         <h3 class="h3">
           {{ allInfoUser.first_name }} {{ allInfoUser.second_name }}
         </h3>
-        <button class="main__profile_anketa_btn ml-4 mt-5"
-        @click="openRedactForm"
+        <button
+          class="main__profile_anketa_btn ml-4 mt-5"
+          @click="openRedactForm"
         >
           <span>Изменить</span>
         </button>
@@ -31,7 +32,7 @@
         >
         <span class="profile__main__anketa_last ml-2 d-inline-block">{{
           allInfoUser.age
-        }}</span>
+        }} лет</span>
         <br />
         <span class="profile__main_anketa_first ml-2 d-inline-block">Вес:</span>
         <span class="profile__main__anketa_last ml-2 d-inline-block"

@@ -1,16 +1,15 @@
 export default {
   state: {
     user: {
-      first_name: 'Виктория',
-      second_name: 'Резяпова',
-      age: 20,
-      weight: 40,
-      height: 170,
-      activity: 'Экстримально высокая',
-      target: 'Поддерживать тонус',
-      infoSelf:
-        'Мое тело - металл, противопоказаний нет, железный человек, не иначе. Мое тело - металл, противопоказаний нет, железный человек, не иначе.Мое тело - металл, противопоказаний нет, железный человек, не иначе.',
-      gender: 'женский'
+      first_name: '',
+      second_name: '',
+      age: '',
+      weight: null,
+      height: null,
+      activity: '',
+      target: '',
+      infoSelf: '',
+      gender: ''
     },
     showAnket: true
   },
@@ -18,7 +17,9 @@ export default {
     showAnketFalse(state) {
       state.showAnket = false
     },
-    showAnketTrue(state) {
+    showAnketTrue(state, data) {
+      console.log(' in mutation ', data)
+      state.user = data
       state.showAnket = true
     }
   },
@@ -26,8 +27,9 @@ export default {
     openFormAnket({ commit }) {
       commit('showAnketFalse')
     },
-    closeFormAnket({ commit }) {
-      commit('showAnketTrue')
+    closeFormAnket({ commit }, data) {
+      console.log(data, ' data in action closeform')
+      commit('showAnketTrue', data)
     }
   },
   getters: {
