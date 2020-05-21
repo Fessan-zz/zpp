@@ -8,36 +8,42 @@
             alt="logo"
             class="profile__header_logo"
           />
-        </a>a
+        </a>
         <div class="d-flex align-items-center profile__header_wr">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link ml-5" href="#">ЛК ТРЕНЕРА!</a>
+              <a class="nav-link ml-2" href="#">Мои тренировки</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-5" href="#">Тренеры</a>
+              <a class="nav-link ml-2" href="#">Тренеры</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-5" href="#">Рецепты</a>
+              <a class="nav-link ml-2" href="#">Рецепты</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-5" href="#">Чат</a>
+              <a class="nav-link ml-2" href="#">Чат</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-5 active_link" href="#">
+              <a class="nav-link ml-2 active_link" href="#">
                 Личный кабинет
               </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ml-2" href="#">Конструктор тренировок</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ml-2" href="#">Подопечные</a>
             </li>
           </ul>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link profile__header_right mt-3 ml-4" href="#"
+              <a class="nav-link profile__header_right mt-3 ml-2" href="#"
                 >Апполинария</a
               >
             </li>
             <li class="nav-item">
               <button
-                class="profile__header_right_btn btn my-2 ml-5"
+                class="profile__header_right_btn btn my-2 ml-2"
                 @click="logout"
               >
                 ВЫЙТИ
@@ -62,4 +68,21 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.profile__header {
+  font-size: 12px !important;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.active_link {
+  font-size: 12px !important;
+}
+.profile__header_right_btn{
+  font-size: 12px !important;
+}
+</style>

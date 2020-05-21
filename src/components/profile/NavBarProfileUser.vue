@@ -8,7 +8,7 @@
             alt="logo"
             class="profile__header_logo"
           />
-        </a>a
+        </a>
         <div class="d-flex align-items-center profile__header_wr">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">

@@ -229,7 +229,7 @@
 </template>
 
 <script>
-import NavBar from './NavBarProfile.vue'
+import NavBar from './NavBarProfileUser.vue'
 import Anketa from './Anketa.vue'
 import FormAnket from './AnketForm.vue'
 import Footer from './Footer.vue'

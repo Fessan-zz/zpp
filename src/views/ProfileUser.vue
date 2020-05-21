@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import Profile from '@/components/profile/Profile.vue'
+import Profile from '@/components/profile/ProfileUser.vue'
 export default {
-  name: 'ProfileAll',
+  name: 'ProfileUser',
   components: { Profile }
 }
 </script>
