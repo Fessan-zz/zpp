@@ -12,7 +12,7 @@
         <div class="d-flex align-items-center profile__header_wr">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link ml-5" href="#">Мои тренировки</a>
+              <a class="nav-link ml-5" href="#">ЛК ТРЕНЕРА!</a>
             </li>
             <li class="nav-item">
               <a class="nav-link ml-5" href="#">Тренеры</a>
