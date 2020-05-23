@@ -2,37 +2,37 @@
   <div class>
     <section class="profile__header">
       <nav class="navbar navbar-expand-lg mx-4">
-        <a href="/" class="navbar-brand">
+        <router-link to="/" class="navbar-brand">
           <img
             src="../../assets/img/logo2.png"
             alt="logo"
             class="profile__header_logo"
           />
-        </a>
+        </router-link>
         <div class="d-flex align-items-center profile__header_wr">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link ml-5" href="#">Мои тренировки</a>
+              <router-link class="nav-link ml-5" to="#">Мои тренировки</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-5" href="#">Тренеры</a>
+              <router-link  class="nav-link ml-5" to="#">Тренеры</router-link >
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-5" href="#">Рецепты</a>
+              <router-link  class="nav-link ml-5" to="#">Рецепты</router-link >
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-5" href="#">Чат</a>
+              <router-link  class="nav-link ml-5" to="#">Чат</router-link >
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-5 active_link" href="#">
+              <router-link class="nav-link ml-5 active_link" to="#">
                 Личный кабинет
-              </a>
+              </router-link>
             </li>
           </ul>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link profile__header_right mt-3 ml-4" href="#"
-                >Апполинария</a
+              <router-link  class="nav-link profile__header_right mt-3 ml-4" to="#"
+                >Апполинария</router-link
               >
             </li>
             <li class="nav-item">

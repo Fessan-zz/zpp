@@ -424,3 +424,25 @@ button, input, select{
 textarea {
   resize: none;
 }
+
+
+//// trainer ////////
+.figure__trainer {
+  width: 0;
+  height: 0;
+  border-top: 658px solid #C2FA4D;
+  border-right: 1110px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.profile__main--h2{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.05em;
+  color: #4F4F4F;
+}

@@ -6,7 +6,7 @@
         <div class="figure"></div>
         <div class="container profie__main_h1">
           <div class="row justify-content-center">
-            <h2 class="col-lg-5 my-4">ЛИЧНЫЙ КАБИНЕТ</h2>
+            <h2 class="col-lg-5 my-4 profile__main--h2">ЛИЧНЫЙ КАБИНЕТ</h2>
           </div>
           <div class="container">
             <div class="row">

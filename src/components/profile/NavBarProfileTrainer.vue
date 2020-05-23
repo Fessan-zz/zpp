@@ -2,43 +2,43 @@
   <div class>
     <section class="profile__header">
       <nav class="navbar navbar-expand-lg mx-4">
-        <a href="/" class="navbar-brand">
+        <router-link to="/" class="navbar-brand">
           <img
             src="../../assets/img/logo2.png"
             alt="logo"
             class="profile__header_logo"
           />
-        </a>
+        </router-link>
         <div class="d-flex align-items-center profile__header_wr">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link ml-2" href="#">Мои тренировки</a>
+              <router-link class="nav-link ml-2" to="#">Мои тренировки</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-2" href="#">Тренеры</a>
+              <router-link class="nav-link ml-2" to="#">Тренеры</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-2" href="#">Рецепты</a>
+              <router-link class="nav-link ml-2" to="#">Рецепты</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-2" href="#">Чат</a>
+              <router-link class="nav-link ml-2" to="#">Чат</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-2 active_link" href="#">
+              <router-link class="nav-link ml-2 active_link" to="#">
                 Личный кабинет
-              </a>
+              </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-2" href="#">Конструктор тренировок</a>
+              <router-link class="nav-link ml-2" to="#">Конструктор тренировок</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link ml-2" href="#">Подопечные</a>
+              <router-link class="nav-link ml-2" to="#">Подопечные</router-link>
             </li>
           </ul>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link profile__header_right mt-3 ml-2" href="#"
-                >Апполинария</a
+              <router-link class="nav-link profile__header_right mt-3 ml-2" to="#"
+                >Апполинария</router-link
               >
             </li>
             <li class="nav-item">

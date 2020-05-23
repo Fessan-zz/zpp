@@ -11,7 +11,7 @@ const routes = [
   },
   {
     path: '/profileuser/:id',
-    name: 'profileUser', //для роутеров
+    name: 'profileuser', //для роутеров
     component: () => import('../views/ProfileUser.vue'),
     props: true
   },
