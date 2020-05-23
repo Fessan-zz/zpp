@@ -28,13 +28,15 @@ export default {
       commit('showAnketTrainerFalse')
     },
     async closeFormAnket({ commit }, data) {
+      console.log(data)
       try {
-        console.log(data, ' data in action closeform')
         const resp = await axios({
-          url: 'http://fessan.ru/api/user/info',
-          data: data,
-          method: 'POST'
-        })
+            url: 'http://fessan.ru/api/user/info',
+            method: 'POST',
+            data
+          }
+           //{ headers: { 'Content-Type': 'multipart/form-data' } }
+        )
         console.log(resp, ' this response')
         commit('showAnketTrue', data)
       } catch (err) {

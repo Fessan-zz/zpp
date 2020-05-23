@@ -10,7 +10,14 @@
           alt="photo"
           class="profile__main_anketa_photo img-fluid ml-3"
         />
-        <button>
+        <input
+          class="inputClose"
+          type="file"
+          id="file"
+          ref="file"
+          v-on:change="handleFileUpload()"
+        />
+        <button v-on:click="inputClick()">
           <img
             src="../../assets/img/plusFormAnket.png"
             alt="add avatar"
@@ -181,7 +188,7 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   data() {
     return {
-      errArrat: {},
+      errArray: {},
       gender: '',
       first_name: '',
       second_name: '',
@@ -191,10 +198,16 @@ export default {
       activity: '',
       target: '',
       infoSelf: '',
-      photo: 'tyk'
+      photo: ''
     }
   },
   methods: {
+    inputClick() {
+      this.$refs.file.click()
+    },
+    handleFileUpload() {
+      this.photo = this.$refs.file.files[0]
+    },
     closeRedactForm() {
       const data = {
         gender: this.gender,
@@ -206,9 +219,21 @@ export default {
         activity: this.activity,
         target: this.target,
         infoSelf: this.infoSelf,
-        photo: this.photo
+        // photo: this.photo
       }
-      console.log(data, 'data')
+      // let fd = new FormData()
+      // fd.append('photo', 'tyks')
+      // fd.append('gender', this.gender)
+      // fd.append('first_name', this.first_name)
+      // fd.append('second_name', this.second_name)
+      // fd.append('age', this.age)
+      // fd.append('weight', this.weight)
+      // fd.append('height', this.height)
+      // fd.append('activity', this.activity)
+      // fd.append('target', this.target)
+      // fd.append('infoSelf', this.infoSelf)
+      // console.log(fd, 'this fd')
+      console.log(data)
       this.$store.dispatch('closeFormAnket', data)
     }
   },
@@ -228,6 +253,9 @@ export default {
 .form-modal--age::-webkit-inner-spin-button,
 .form-modal--weight::-webkit-inner-spin-button,
 .form-modal--height::-webkit-inner-spin-button {
+  display: none;
+}
+.inputClose {
   display: none;
 }
 </style>
