@@ -119,52 +119,43 @@
           {{ errArray['height'] ? errArray['height'].toString() : '' }}
         </div>-->
         </div>
-        <div>
-          <label for="activity" class="profile__main_anketa_first  ml-2"> Физическая активность:
-          </label>
-          <select
-            name="activity"
-            v-model="activity"
-            class="profile__main--anket--select form-modal--activity"
-          >
-            <option disabled value>Выберите</option>
-            <option>отсутствие физических нагрузок,сидячая работа</option>
-            <option>4-5 тренировок в неделю или активная работа</option>
-            <option>5/6 интенсивных тренировок в неделю</option>
-            <option>тренировки 7 дней в неделю</option>
-            <option>интенсивные тренировки 2 раза в день</option>
-            <option>тяжелые физические нагрузки на работе</option>
-            <option>Никогда не занимался и не занимаюсь спортом</option>
-          </select>
-          <!-- вывод ошибок! -->
-        </div>
-        <div>
-          <label for="target" class="profile__main_anketa_first ml-2 mt-4">Цель:
-          </label>
-          <select
-            name="target"
-            v-model="target"
-            class="profile__main--anket--select ml-2 form-modal--target"
-          >
-            <option disabled value>Выберите</option>
-            <option>сбросить лишний вес</option>
-            <option>поддерживать вес</option>
-            <option>набрать массу</option>
-          </select>
-          <!-- вывод ошибок! -->
-        </div>
         <div class="">
-          <label for="infoSelf" class="profile__main_anketa_first mt-3  ml-2"
-            >Информация о себе:</label
+          <label for="infoSelf" class="profile__main_anketa_first  ml-2"
+            >Образование:</label
           >
-          <br>
+          <br />
+          <textarea
+            rows="2"
+            cols="57"
+            name="infoSelf"
+            placeholder=""
+            class="ml-3 form-modal__input form-modal__input_a form-modal--infoSelf"
+            v-model="infoSelf"
+          />
+          <!-- <div class="form-modal__err">
+          {{ errArray['age'] ? errArray['age'].toString() : '' }}
+        </div>-->
+        </div>
+        <label for="experience" class="profile__main_anketa_first ml-2">Стаж:</label>
+        <input
+          type="text"
+          name="experience"
+          placeholder=""
+          class="form-modal__input form-modal__input--exp ml-2"
+          v-model="experience"
+        />
+        <div class="">
+          <label for="description" class="profile__main_anketa_first ml-2"
+            >Заслуги:</label
+          >
+          <br />
           <textarea
             rows="5"
             cols="57"
-            name="infoSelf"
-            placeholder="О себе"
+            name="description"
+            placeholder=""
             class="ml-3 form-modal__input form-modal__input_a form-modal--infoSelf"
-            v-model="infoSelf"
+            v-model="description"
           />
           <!-- <div class="form-modal__err">
           {{ errArray['age'] ? errArray['age'].toString() : '' }}
@@ -188,10 +179,10 @@ export default {
       age: null,
       weight: null,
       height: null,
-      activity: '',
-      target: '',
+      description: '',
       infoSelf: '',
-      photo: 'tyk'
+      photo: '',
+      experience: ''
     }
   },
   methods: {
@@ -203,10 +194,10 @@ export default {
         age: this.age,
         weight: this.weight,
         height: this.height,
-        activity: this.activity,
-        target: this.target,
         infoSelf: this.infoSelf,
-        photo: this.photo
+        photo: this.photo,
+        description: this.description,
+        experience: this.experience
       }
       console.log(data, 'data')
       this.$store.dispatch('closeFormAnket', data)

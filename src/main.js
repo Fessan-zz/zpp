@@ -8,6 +8,13 @@ import store from './store'
 Vue.prototype.$http = Axios
 Vue.config.productionTip = false
 
+Vue.prototype.$http = Axios
+
+const token = localStorage.getItem('api_token')
+if (token) {
+  Vue.prototype.$http.defaults.headers.common['Authorization'] = token
+}
+
 new Vue({
   router,
   store,

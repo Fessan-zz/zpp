@@ -9,7 +9,7 @@
       <div class="mt-3 text-center">
         <span class="profile__main_anketa_first ml-2 d-inline-block">Пол:</span>
         <span class="profile__main__anketa_last ml-2 d-inline-block mb-5">
-          {{ allInfoTrainer.gender }}qeqwe
+          {{ allInfoTrainer.gender }}
         </span>
       </div>
     </div>
@@ -34,11 +34,13 @@
           allInfoTrainer.age
         }} лет</span>
         <br />
+
         <span class="profile__main_anketa_first ml-2 d-inline-block">Вес:</span>
         <span class="profile__main__anketa_last ml-2 d-inline-block"
           >{{ allInfoTrainer.weight }} кг</span
         >
         <br />
+
         <span class="profile__main_anketa_first ml-2 d-inline-block"
           >Рост:</span
         >
@@ -46,6 +48,7 @@
           >{{ allInfoTrainer.height }} см</span
         >
         <br />
+
         <span class="profile__main_anketa_first ml-2 d-inline-block"
           >Образование:</span
         >
@@ -53,6 +56,7 @@
         <span class="profile__main__anketa_last ml-2 d-inline-block mb-5">
           {{ allInfoTrainer.infoSelf }}
         </span>
+
         <br />
         <span class="profile__main_anketa_first ml-2 d-inline-block"
           >Стаж:</span
@@ -61,10 +65,7 @@
           >{{ allInfoTrainer.experience }}</span
         >
         <br />
-        <span class="profile__main__anketa_last ml-2 d-inline-block mb-5">
-          {{ allInfoTrainer.infoSelf }}
-        </span>
-        <br />
+
         <span class="profile__main_anketa_first ml-2 d-inline-block"
           >Заслуги:</span
         >

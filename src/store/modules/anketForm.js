@@ -29,14 +29,16 @@ export default {
     },
     async closeFormAnket({ commit }, data) {
       console.log(data)
+      const token = localStorage.getItem('api_token')
       try {
         const resp = await axios({
-            url: 'http://fessan.ru/api/user/info',
-            method: 'POST',
-            data
-          }
-           //{ headers: { 'Content-Type': 'multipart/form-data' } }
-        )
+          url: 'http://fessan.ru/api/user/info',
+          data,
+          method: 'POST'
+          // headers: {
+          //   'Authorization': `Bearer ${token}`
+          // }
+        })
         console.log(resp, ' this response')
         commit('showAnketTrue', data)
       } catch (err) {

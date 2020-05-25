@@ -430,7 +430,7 @@ textarea {
 .figure__trainer {
   width: 0;
   height: 0;
-  border-top: 658px solid #C2FA4D;
+  border-top: 696px solid #C2FA4D;
   border-right: 1110px solid transparent;
   position: absolute;
   top: 0;
@@ -445,4 +445,9 @@ textarea {
   line-height: 29px;
   letter-spacing: 0.05em;
   color: #4F4F4F;
+}
+
+.form-modal__input--exp{
+  width: 100%;
+  max-width: 385px;
 }

@@ -68,12 +68,10 @@ export default {
 
   methods: {
     login() {
-      const data = {
-        email: this.email,
-        password: this.password
-      }
+      let email = this.email
+      let password = this.password
       this.$store
-        .dispatch('login', data)
+        .dispatch('login', { email, password })
         .then(resp => {
           if (resp.data.success == false) {
             if (resp.data.message) {
@@ -93,7 +91,7 @@ export default {
             localStorage.setItem('id', userI.id)
             localStorage.setItem('email', userI.email),
               this.$store.commit('auth_success', { token, userI })
-            //axios.defaults.headers.common['Authorization'] = token
+            axios.defaults.headers.common['Authorization'] = token
             if (resp.data['0'].role == 'trainer') {
               this.$router.push({
                 name: 'profiletrainer',

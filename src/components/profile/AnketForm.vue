@@ -218,7 +218,7 @@ export default {
         height: this.height,
         activity: this.activity,
         target: this.target,
-        infoSelf: this.infoSelf,
+        infoSelf: this.infoSelf
         // photo: this.photo
       }
       // let fd = new FormData()

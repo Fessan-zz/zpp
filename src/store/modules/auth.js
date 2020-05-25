@@ -40,18 +40,35 @@ export default {
       }
     },
     async login({ commit }, loginData) {
-      try {
-        const resp = await axios({
-          url: `http://fessan.ru/api/login`,
-          data: loginData, // data register  передача данных ч/з dispatch
+      return new Promise((resolve, reject) => {
+        commit('auth_request')
+        axios({
+          url: 'http://fessan.ru/api/login',
+          data: loginData,
           method: 'POST'
+        }).then((resp) => {
+          console.log(resp, 'respons in login actions')
+          return resp
         })
-        return resp
-      } catch (err) {
-        commit('auth_error') // ошибка
-        localStorage.removeItem('api_token')
-        console.log(err)
-      }
+      });
+      // try {
+      //   const token = localStorage.getItem('api_token')
+      //   const resp = await axios({
+      //     url: `http://fessan.ru/api/login`,
+      //     data: loginData, // data register  передача данных ч/з dispatch
+      //     method: 'POST',
+      //     headers: {
+      //       Accept: 'application/json',
+      //       'Content-Type': 'application/json',
+      //       'Authorization': `Bearer ${token}`,
+      //       'Access-Control-Allow-Origin': '*'
+      //     }
+      //   })
+      //   return resp
+      // } catch (err) {
+      //   commit('auth_error') // ошибка
+      //   localStorage.removeItem('api_token')
+      //   console.log(err)
     },
     logout({ commit }) {
       return new Promise(resolve => {
