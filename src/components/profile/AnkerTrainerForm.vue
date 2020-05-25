@@ -199,7 +199,6 @@ export default {
         description: this.description,
         experience: this.experience
       }
-      console.log(data, 'data')
       this.$store.dispatch('closeFormAnket', data)
     }
   },

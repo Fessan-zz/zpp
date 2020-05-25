@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import ProfileUser from '../views/ProfileUser.vue'
+import ProfileTrainer from '../views/ProfileTrainer.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -12,13 +15,13 @@ const routes = [
   {
     path: '/profileuser/:id',
     name: 'profileuser', //для роутеров
-    component: () => import('../views/ProfileUser.vue'),
+    component: ProfileUser,
     props: true
   },
   {
     path: '/profiletrainer/:id',
     name: 'profiletrainer',
-    component: () => import('../views/ProfileTrainer.vue'),
+    component: ProfileTrainer,
     props: true
   }
 ]

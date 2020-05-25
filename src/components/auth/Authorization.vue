@@ -73,6 +73,7 @@ export default {
       this.$store
         .dispatch('login', { email, password })
         .then(resp => {
+          console.log(resp, 'resp in auth')
           if (resp.data.success == false) {
             if (resp.data.message) {
               this.errArray = resp.data
@@ -85,21 +86,24 @@ export default {
               return
             }
           } else {
-            const token = resp.data['0'].api_token
-            const userI = resp.data['0']
-            localStorage.setItem('api_token', token)
-            localStorage.setItem('id', userI.id)
-            localStorage.setItem('email', userI.email),
-              this.$store.commit('auth_success', { token, userI })
-            axios.defaults.headers.common['Authorization'] = token
-            if (resp.data['0'].role == 'trainer') {
+            // const token = resp.data['0'].api_token
+            // const userI = resp.data['0']
+            // localStorage.setItem('api_token', token)
+            // localStorage.setItem('id', userI.id)
+            // localStorage.setItem('email', userI.email),
+            //   this.$store.commit('auth_success', { token, userI })
+            // axios.defaults.headers.common['Authorization'] = token
+
+            console.log(resp.data['0'].role, 'this data role in auth')
+            if (resp.data.role === 'trainer') {
               this.$router.push({
                 name: 'profiletrainer',
                 params: { id: userI.id }
               })
               //открыть кабинет тренера
             }
-            if (resp.data['0'].role == 'user') {
+            if (resp.data.role === 'user') {
+              console.log('user user user')
               this.$router.push({
                 name: 'profileuser',
                 params: { id: userI.id }

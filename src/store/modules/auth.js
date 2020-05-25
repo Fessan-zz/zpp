@@ -10,9 +10,9 @@ export default {
     auth_request(state) {
       state.status = 'loading'
     },
-    auth_success(state, item) {
+    auth_success(state, data ) {
       state.status = 'success'
-      const { token, userI } = item
+      const { token, userI } = data
       state.token = token
       state.user = userI
     },
@@ -46,29 +46,25 @@ export default {
           url: 'http://fessan.ru/api/login',
           data: loginData,
           method: 'POST'
-        }).then((resp) => {
-          console.log(resp, 'respons in login actions')
-          return resp
         })
-      });
-      // try {
-      //   const token = localStorage.getItem('api_token')
-      //   const resp = await axios({
-      //     url: `http://fessan.ru/api/login`,
-      //     data: loginData, // data register  передача данных ч/з dispatch
-      //     method: 'POST',
-      //     headers: {
-      //       Accept: 'application/json',
-      //       'Content-Type': 'application/json',
-      //       'Authorization': `Bearer ${token}`,
-      //       'Access-Control-Allow-Origin': '*'
-      //     }
-      //   })
-      //   return resp
-      // } catch (err) {
-      //   commit('auth_error') // ошибка
-      //   localStorage.removeItem('api_token')
-      //   console.log(err)
+          .then(resp => {
+            const token = resp.data['0'].api_token
+            const userI = resp.data['0']
+            localStorage.setItem('api_token', token)
+            localStorage.setItem('id', userI.id)
+            localStorage.setItem('email', userI.email)
+            axios.defaults.headers.common['Authorization'] = token
+            const data = { token, userI }
+            commit('auth_success', data)
+            resolve(resp)
+          })
+          .catch(err => {
+            console.log('in catch')
+            commit('auth_error')
+            localStorage.removeItem('api_token')
+            reject(err)
+          })
+      })
     },
     logout({ commit }) {
       return new Promise(resolve => {
